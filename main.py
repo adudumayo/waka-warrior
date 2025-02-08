@@ -8,4 +8,5 @@ soup = BeautifulSoup(data, 'html.parser')
 tags = soup.find_all('a', {'class':'tip'})
 
 for tag in tags:
-    print(str(tag) + '\n')
+    if "Nigeria" in str(tag):
+        print(str(tag) + '\n')
