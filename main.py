@@ -19,7 +19,11 @@ response = requests.get(url)
 data = response.text
 soup = BeautifulSoup(data, 'html.parser')
 tags = soup.find_all('a', {'class':'tip'})
+rank = soup.find_all('a', {'name':'100'})
+print(rank)
 
-for tag in tags:
-    if "Nigeria" in str(tag):
-        print(str(tag) + '\n')
+tags = soup.find_all('a')
+
+'''for tag in tags:
+    print(str(tag) + '\n')
+    '''
