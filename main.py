@@ -24,3 +24,8 @@ for tag in tags:
     for country in african_countries:
         if country in str(tag):
             print(tag)
+
+''' next step is crawling
+    I will do it tomorrow
+    I have work in the morning
+'''
