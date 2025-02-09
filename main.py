@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import re
 
 african_countries = [
     "Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", 
