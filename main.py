@@ -25,4 +25,6 @@ tags = soup.find_all('a', {'class':'tip'})
 #names = soup.find_all('a', {'class':'leader-coder'})
 
 for tag in tags:
-    print(str(tag) + '\n')
+    for country in african_countries:
+        if country in str(tag):
+            print(tag)
