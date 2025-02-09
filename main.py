@@ -1,7 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-#import re
-#from itertools import zip_longest
 
 african_countries = [
     "Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", 
@@ -21,8 +19,6 @@ response = requests.get(url)
 data = response.text
 soup = BeautifulSoup(data, 'html.parser')
 tags = soup.find_all('a', {'class':'tip'})
-#ranks = soup.find_all('a', {'name':re.compile(r'^\d')})
-#names = soup.find_all('a', {'class':'leader-coder'})
 
 for tag in tags:
     for country in african_countries:
