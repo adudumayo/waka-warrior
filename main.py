@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import re
+from itertools import zip_longest
 
 african_countries = [
     "Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", 
