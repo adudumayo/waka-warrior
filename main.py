@@ -19,11 +19,5 @@ response = requests.get(url)
 data = response.text
 soup = BeautifulSoup(data, 'html.parser')
 tags = soup.find_all('a', {'class':'tip'})
-rank = soup.find_all('a', {'name':'100'})
-print(rank)
+ranks = soup.find_all('a', {'name':'100'})
 
-tags = soup.find_all('a')
-
-'''for tag in tags:
-    print(str(tag) + '\n')
-    '''
