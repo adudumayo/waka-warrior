@@ -25,7 +25,3 @@ for tag in tags:
         if country in str(tag):
             print(tag)
 
-''' next step is crawling
-    I will do it tomorrow
-    I have work in the morning
-'''
