@@ -14,14 +14,19 @@ african_countries = [
     "Tunisia", "Uganda", "Zambia", "Zimbabwe"
 ]
 
-url = "https://wakatime.com/leaders"
-response = requests.get(url)
-data = response.text
-soup = BeautifulSoup(data, 'html.parser')
-tags = soup.find_all('a', {'class':'tip'})
+x = 0
+while(True):
+    url = "https://wakatime.com/leaders"
+    response = requests.get(url)
+    data = response.text
+    soup = BeautifulSoup(data, 'html.parser')
+    tags = soup.find_all('a', {'class':'tip'})
 
-for tag in tags:
-    for country in african_countries:
-        if country in str(tag):
-            print(tag)
+    for tag in tags:
+        for country in african_countries:
+            if country in str(tag):
+                print(tag)
 
+    x += 1
+    if x == 3:
+        break
